@@ -19,21 +19,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redView.layer.cornerRadius = 100
-        redView.layer.borderWidth = 2
-        redView.layer.borderColor = UIColor.black.cgColor
-        
-        orangeView.layer.cornerRadius = 100
-        orangeView.layer.borderWidth = 2
-        orangeView.layer.borderColor = UIColor.black.cgColor
-        
-        greenView.layer.cornerRadius = 100
-        greenView.layer.borderWidth = 2
-        greenView.layer.borderColor = UIColor.black.cgColor
-        
-        redView.backgroundColor = .clear
-        orangeView.backgroundColor = .clear
-        greenView.backgroundColor = .clear
+        configureView(view: redView)
+        configureView(view: orangeView)
+        configureView(view: greenView)
+    }
+    
+    func configureView(view: UIView) {
+        view.layer.cornerRadius = 100
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.black.cgColor
+        view.backgroundColor = .clear
     }
     
     // логика кнопки
@@ -50,34 +45,5 @@ class ViewController: UIViewController {
             greenView.backgroundColor = .clear
         }
     }
-    
-    
-//
-//     //экран БУДЕТ показан
-//    override func viewWillApрear(_ animated: Bool) {
-//        super.viewWillApрear(animated)
-//        print(" БУДЕТ")
-//    }
-//
-//    //Экран БЫЛ показан
-//    override func viewDidApрear(_ animated: Bool) {
-//        super.viewDidApрear(animated)
-//        // Do any additional setup after loading the view.
-//    }
-//
-//// экран БУДЕТ скрыт
-//    override func viewWillDisapрear(_ animated: Bool) {
-//        super.viewWillDisapрear(animated)
-//        // Do any additional setup after loading the view.
-//    }
-//
-//    // экран БЫЛ скрыт
-//        override func viewDidDisapрear(_ animated: Bool) {
-//            super.viewDidDisapрear(animated)
-//            // Do any additional setup after loading the view.
-//        }
-    
-    
-
 }
 
