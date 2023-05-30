@@ -19,12 +19,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureView(view: redView)
-        configureView(view: orangeView)
-        configureView(view: greenView)
+        let arrayView = [redView, orangeView, greenView]
+        
+        for view in arrayView {
+            configureView(view!)
+        }
+        
+//        configureView(redView)
+//        configureView(orangeView)
+//        configureView(greenView)
     }
     
-    func configureView(view: UIView) {
+    func configureView(_ view: UIView) {
         view.layer.cornerRadius = 100
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.black.cgColor
