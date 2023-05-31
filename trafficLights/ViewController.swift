@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var orangeView: UIView!
     @IBOutlet weak var greenView: UIView!
     
-//кнопка
+    @IBOutlet weak var redViewHeightConstraint: NSLayoutConstraint!
+    //кнопка
     @IBOutlet weak var turnButton: UIButton!
     
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     func configureView(_ view: UIView) {
-        view.layer.cornerRadius = 100
+        view.layer.cornerRadius = redViewHeightConstraint.constant / 2
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.black.cgColor
         view.backgroundColor = .clear
