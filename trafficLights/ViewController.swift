@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
     //вьюхи светофора
     @IBOutlet weak var redView: UIView!
     @IBOutlet weak var orangeView: UIView!
     @IBOutlet weak var greenView: UIView!
+    
+    let blueView = UIView(frame: .zero)
+    
     
     @IBOutlet weak var redViewHeightConstraint: NSLayoutConstraint!
     //кнопка
@@ -20,15 +24,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let arrayView = [redView, orangeView, greenView]
+//        let arrayView = [redView, orangeView, greenView]
+//
+//        for view in arrayView {
+//            configureView(view!)
+//        }
         
-        for view in arrayView {
-            configureView(view!)
+        configureView(redView)
+        configureView(orangeView)
+        configureView(greenView)
+        configureView(blueView)
+        
+        blueView.backgroundColor = .blue
+        view.addSubview(blueView)
+        
+        blueView.snp.makeConstraints { make in
+            make.width.height.equalTo(100)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(greenView.snp.bottom).offset(32)
+//            make.height.equalTo(100)
+//            make.centerX.equalToSuperview()
+//            make.centerY.equalToSuperview()
         }
-        
-//        configureView(redView)
-//        configureView(orangeView)
-//        configureView(greenView)
     }
     
     func configureView(_ view: UIView) {
