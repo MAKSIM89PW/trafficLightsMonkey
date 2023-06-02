@@ -21,20 +21,32 @@ class SvetoforController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstSectionView.turnOff()
+        secondSectionView.turnOff()
+        thirdSectionView.turnOff()
+        
+        firstSectionView.colorLight = .red
+        secondSectionView.colorLight = .orange
+        thirdSectionView.colorLight = .green
     }
     
     // логика кнопки
     @IBAction func turnButtonAction(_ sender: Any) {
-        if firstSectionView.backgroundColor == .clear && secondSectionView.backgroundColor == .clear && thirdSectionView.backgroundColor == .clear {
-            firstSectionView.backgroundColor = .red
-        } else if firstSectionView.backgroundColor == .red{
-            firstSectionView.backgroundColor = .clear
-            secondSectionView.backgroundColor = .orange
-        } else if secondSectionView.backgroundColor == .orange {
-            secondSectionView.backgroundColor = .clear
-            thirdSectionView.backgroundColor = .green
-        } else if thirdSectionView.backgroundColor == .green {
-            thirdSectionView.backgroundColor = .clear
+        //если все выкл то вкл первую
+        // если первая вкл то выкл 1 и вкл 2
+        // если вторая вкл то выкл 2 вкл 3 .........
+        
+        if firstSectionView.isOff() && secondSectionView.isOff() && thirdSectionView.isOff() {
+            firstSectionView.turnOn()
+        } else if firstSectionView.isOn() {
+            firstSectionView.turnOff()
+            secondSectionView.turnOn()
+        } else if secondSectionView.isOn() {
+            secondSectionView.turnOff()
+            thirdSectionView.turnOn()
+        } else if  thirdSectionView.isOn() {
+            thirdSectionView.turnOff()
         }
     }
 }

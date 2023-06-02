@@ -9,6 +9,8 @@ import UIKit
 
 class SvetoforSectionView: UIView {
     
+    var colorLight: UIColor?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -17,4 +19,35 @@ class SvetoforSectionView: UIView {
         self.layer.borderColor = UIColor.black.cgColor
         self.backgroundColor = .clear
     }
+    
+    //включение
+    func turnOn() {
+        backgroundColor = colorLight
+    }
+    
+    //выключение
+    func turnOff() {
+        backgroundColor = .clear
+    }
+    
+    //    получение состояни секции на вкл
+    func isOff() -> Bool {
+        if backgroundColor == .clear {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func isOn() -> Bool {
+        if backgroundColor == .clear {
+            return false
+        } else {
+            return true
+        }
+        
+     //   return backgroundColor != .clear
+    }
+    
+    
 }
