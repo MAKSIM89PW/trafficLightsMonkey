@@ -28,6 +28,12 @@ class SvetoforSectionView: UIView {
         setupView()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        setupView()
+    }
+    
     func setupView() {
         self.layer.cornerRadius = frame.size.width / 2
         self.layer.borderWidth = 2

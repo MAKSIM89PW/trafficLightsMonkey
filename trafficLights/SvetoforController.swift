@@ -22,7 +22,7 @@ class SvetoforController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(stackView)
-        stackView.spacing = 0
+        stackView.spacing = 12
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fillEqually
@@ -33,7 +33,7 @@ class SvetoforController: UIViewController {
         
         stackView.snp.makeConstraints { make in
             make.width.equalTo(300)
-            make.height.equalTo(300)
+            make.height.greaterThanOrEqualTo(300)
             make.top.equalTo(64)
             make.centerX.equalToSuperview()
         }
