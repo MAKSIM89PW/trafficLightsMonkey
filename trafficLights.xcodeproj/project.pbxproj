@@ -18,6 +18,7 @@
 		B932D9A62A2365E70063703C /* trafficLightsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932D9A52A2365E70063703C /* trafficLightsUITests.swift */; };
 		B932D9A82A2365E70063703C /* trafficLightsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932D9A72A2365E70063703C /* trafficLightsUITestsLaunchTests.swift */; };
 		B940714C2A27766800D04E2E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B940714B2A27766800D04E2E /* SnapKit */; };
+		B9E3CB4E2A41B672007911E9 /* SvetoforView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3CB4D2A41B672007911E9 /* SvetoforView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		B932D9A12A2365E70063703C /* trafficLightsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trafficLightsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B932D9A52A2365E70063703C /* trafficLightsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trafficLightsUITests.swift; sourceTree = "<group>"; };
 		B932D9A72A2365E70063703C /* trafficLightsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trafficLightsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9E3CB4D2A41B672007911E9 /* SvetoforView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvetoforView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				B932D9862A2365E60063703C /* SceneDelegate.swift */,
 				B932D9882A2365E60063703C /* SvetoforController.swift */,
 				B91BB1742A292AF5004DDAA1 /* SvetoforSectionView.swift */,
+				B9E3CB4D2A41B672007911E9 /* SvetoforView.swift */,
 				B932D98A2A2365E60063703C /* Main.storyboard */,
 				B932D98D2A2365E70063703C /* Assets.xcassets */,
 				B932D98F2A2365E70063703C /* LaunchScreen.storyboard */,
@@ -271,6 +274,7 @@
 			files = (
 				B91BB1752A292AF5004DDAA1 /* SvetoforSectionView.swift in Sources */,
 				B932D9892A2365E60063703C /* SvetoforController.swift in Sources */,
+				B9E3CB4E2A41B672007911E9 /* SvetoforView.swift in Sources */,
 				B932D9852A2365E60063703C /* AppDelegate.swift in Sources */,
 				B932D9872A2365E60063703C /* SceneDelegate.swift in Sources */,
 			);

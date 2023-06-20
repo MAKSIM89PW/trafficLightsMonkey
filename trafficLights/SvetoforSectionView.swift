@@ -9,7 +9,7 @@ import UIKit
 
 class SvetoforSectionView: UIView {
     
-    var colorLight: UIColor?
+    private var colorLight: UIColor?
     
     init(colorLight: UIColor) {
         super.init(frame: .zero)
@@ -34,11 +34,11 @@ class SvetoforSectionView: UIView {
         setupView()
     }
     
-    func setupView() {
-        self.layer.cornerRadius = frame.size.width / 2
-        self.layer.borderWidth = 2
-        self.layer.borderColor = UIColor.black.cgColor
-        self.backgroundColor = .clear
+    // MARK: - Public
+    
+    /// Здесь назначается цвет секции при оздании вью через сториборд
+    func setColorLight(_ colorLight: UIColor) {
+        self.colorLight = colorLight
     }
     
     //включение
@@ -66,9 +66,15 @@ class SvetoforSectionView: UIView {
         } else {
             return true
         }
-        
-     //   return backgroundColor != .clear
     }
     
+    // MARK: - Pivate
+    
+    func setupView() {
+        self.layer.cornerRadius = frame.size.width / 2
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.black.cgColor
+        self.backgroundColor = .clear
+    }
     
 }
