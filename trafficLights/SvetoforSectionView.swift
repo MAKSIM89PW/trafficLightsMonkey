@@ -11,9 +11,24 @@ class SvetoforSectionView: UIView {
     
     var colorLight: UIColor?
     
+    init(colorLight: UIColor) {
+        super.init(frame: .zero)
+        
+        self.colorLight = colorLight
+        
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        setupView()
+    }
+    
+    func setupView() {
         self.layer.cornerRadius = frame.size.width / 2
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.black.cgColor

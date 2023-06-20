@@ -10,11 +10,9 @@ import SnapKit
 
 class SvetoforController: UIViewController {
     //вьюхи светофора
-    @IBOutlet weak var firstSectionView: SvetoforSectionView!
-    
-    @IBOutlet weak var secondSectionView: SvetoforSectionView!
-    
-    @IBOutlet weak var thirdSectionView: SvetoforSectionView!
+    var firstSectionView = SvetoforSectionView(colorLight: .red)
+    var secondSectionView = SvetoforSectionView(colorLight: .orange)
+    var thirdSectionView = SvetoforSectionView(colorLight: .green)
     
     //кнопка
     @IBOutlet weak var turnButton: UIButton!
@@ -22,13 +20,19 @@ class SvetoforController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addSubview(firstSectionView)
+        view.addSubview(secondSectionView)
+        view.addSubview(thirdSectionView)
+        
+        firstSectionView.snp.makeConstraints { make in
+            make.width.height.equalTo(100)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(100)
+        }
+        
         firstSectionView.turnOff()
         secondSectionView.turnOff()
         thirdSectionView.turnOff()
-        
-        firstSectionView.colorLight = .red
-        secondSectionView.colorLight = .orange
-        thirdSectionView.colorLight = .green
     }
     
     // логика кнопки
